@@ -1,0 +1,10 @@
+D:\Desktop\TrenutniProgrami\FizikaZezanje\BouncingBall\BouncingBall\bin\Debug\BouncingBall.exe.config
+D:\Desktop\TrenutniProgrami\FizikaZezanje\BouncingBall\BouncingBall\bin\Debug\BouncingBall.exe
+D:\Desktop\TrenutniProgrami\FizikaZezanje\BouncingBall\BouncingBall\bin\Debug\BouncingBall.pdb
+D:\Desktop\TrenutniProgrami\FizikaZezanje\BouncingBall\BouncingBall\obj\Debug\BouncingBall.csprojAssemblyReference.cache
+D:\Desktop\TrenutniProgrami\FizikaZezanje\BouncingBall\BouncingBall\obj\Debug\BouncingBall.Form1.resources
+D:\Desktop\TrenutniProgrami\FizikaZezanje\BouncingBall\BouncingBall\obj\Debug\BouncingBall.Properties.Resources.resources
+D:\Desktop\TrenutniProgrami\FizikaZezanje\BouncingBall\BouncingBall\obj\Debug\BouncingBall.csproj.GenerateResource.cache
+D:\Desktop\TrenutniProgrami\FizikaZezanje\BouncingBall\BouncingBall\obj\Debug\BouncingBall.csproj.CoreCompileInputs.cache
+D:\Desktop\TrenutniProgrami\FizikaZezanje\BouncingBall\BouncingBall\obj\Debug\BouncingBall.exe
+D:\Desktop\TrenutniProgrami\FizikaZezanje\BouncingBall\BouncingBall\obj\Debug\BouncingBall.pdb
