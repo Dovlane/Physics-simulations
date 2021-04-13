@@ -10,14 +10,16 @@ using System.Windows.Forms;
 
 namespace BouncingBall
 {
-    // class Ball \ Ball()
-    // Add limits for values of xBall and yBall
+    // Should be repaired
+    // 1. Balls could sink under the floor
 
-    // Make a list of Balls, and make chosenBall variable
-    
+    // For adding:
+    // 1. Balls should collide to each other
+    // 2. Make chosenBall variable
+
     public partial class Form1 : Form
     {
-        Ball ball = null;
+        List<Ball> balls = null;
 
         public Form1()
         {
@@ -32,8 +34,9 @@ namespace BouncingBall
         {
             Ball.bordersOfForm(ClientRectangle.Width * 1.0, ClientRectangle.Height * 1.0);
             Ball.timeTickChanged(timer1.Interval);
+            balls = new List<Ball>();
 
-            ball = new Ball(ClientRectangle.Width * 1.0 / 2, ClientRectangle.Height * 3.0 / 4);
+            balls.Add(new Ball(ClientRectangle.Width * 1.0 / 2, ClientRectangle.Height * 3.0 / 4));
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,7 +52,8 @@ namespace BouncingBall
             }
             else if (button1.Text == "Continue")
             {
-                ball.changeVelocity(textBox1.Text, textBox2.Text);
+                foreach (Ball ball in balls)
+                    ball.changeVelocity(textBox1.Text, textBox2.Text);
 
                 label1.Visible = false;
                 textBox1.Visible = false;
@@ -69,9 +73,14 @@ namespace BouncingBall
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            if (ball != null)
-                ball.Paint(e);
+            if (balls != null)
+                foreach (Ball ball in balls)
+                    ball.Paint(e);
         }
 
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            balls.Add(new Ball(e.X, e.Y));
+        }
     }
 }

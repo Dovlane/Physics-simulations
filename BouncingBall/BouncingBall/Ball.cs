@@ -27,16 +27,23 @@ namespace BouncingBall
         {
             delta_t = 1.0 / timerInterval * 10;
         }
-
+        
         public Ball(double xBall, double yBall)
         {
-            this.xBall = xBall;
-            this.yBall = yBall;
+            this.r = 20.0;
+            this.xBall = correctCoordinate(xBall, r, widthOfForm);
+            this.yBall = correctCoordinate(yBall, r, heightOfForm);
             this.Velocity_X = 0.0;
             this.Velocity_Y = 0.0;
-            this.r = 20.0;
         }
-
+        private double correctCoordinate(double coorBall, double r, double coorMaxValue)
+        {
+            if (coorBall - r < 0)
+                return r;
+            if (coorBall + r > coorMaxValue)
+                return coorMaxValue - r;
+            return coorBall;
+        }
         private bool inVerticalBoundaries(double y, double r)
         {
             return y - r >= 0 && y + r <= heightOfForm;
